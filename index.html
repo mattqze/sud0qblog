@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <style>
+   .box {
+    height:300px;
+    width:400px;
+    background-color:white;
+    border-radius:4%;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    }
+  </style>
+  <body style="background-color:black">
+    <div style="color:white">
+    <head>
+      <h1 style="text-align:center">
+        Sud0q's blog
+      </h1>
+      <hr>
+    </head>
+    </div>
+    <div class="box">
+      <h2>
+        Who is sud0q?
+      </h2>
+      <br>
+      <h4>
+        I build computers.
+      </h4>
+      <br>
+      <h4>
+        I know how to use GNU/Linux and know HTML
+      </h4>
+      <br>
+      <h4>
+        I would like to learn CSS, JavaScript and Python.
+      </h4>
+      <br>
+      <br>
+      <h4>
+        Scroll down for my blog!
+      </h4>
+    </div>
+    <br>
+    <br>
+    <div style="text-align:center">
+    <ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
